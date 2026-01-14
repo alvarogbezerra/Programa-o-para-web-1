@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  /* Fundo Creme com degradê para azul profundo */
+  background: linear-gradient(180deg, #fffdd0 0%, #1c69d4 60%, #06205d 100%);
+  background-attachment: fixed;
+  color: #333;
+}
+
+header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  padding: 0.6rem 1.5rem;
+  border: 1px solid #06205d;
+  background-color: white;
+  color: #06205d;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #06205d;
+  color: #fff;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.benefits-container {
+  max-width: 1300px;
+  width: 100%;
+}
+
+.main-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #06205d;
+  text-transform: uppercase;
+}
+
+/* Flexbox ajustado para 4 colunas */
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* Espaçamento menor entre os cards */
+}
+
+.benefit-card {
+  /* Largura calculada para caber 4 em uma linha de 1200px-1300px */
+  width: calc(25% - 20px); 
+  min-width: 250px; 
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-card img {
+  width: 100%;
+  height: 160px; /* Imagens menores conforme solicitado */
+  object-fit: cover;
+}
+
+.benefit-text {
+  padding: 1rem;
+}
+
+.benefit-text h2 {
+  font-size: 1.1rem;
+  color: #1c69d4;
+  margin-bottom: 5px;
+}
+
+.benefit-text p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #666;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #000;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+/* Responsividade: vira 2 colunas em tablets e 1 em celular */
+@media (max-width: 1100px) {
+  .benefit-card { width: calc(50% - 20px); }
+}
+
+@media (max-width: 600px) {
+  .benefit-card { width: 100%; }
+}
